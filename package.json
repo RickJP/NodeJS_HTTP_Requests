@@ -1,0 +1,17 @@
+{
+  "name": "MakingHTTPRequestsFromNodeJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server-request.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "stream": "0.0.2"
+  }
+}

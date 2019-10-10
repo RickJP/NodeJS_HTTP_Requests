@@ -17,8 +17,10 @@ https
 
       // The whole response has been received. Print out the response.
       res.on("end", () => {
-        let url = JSON.parse(data);
+        let url = JSON.parse(data).hdurl;
+        let explanation = JSON.parse(data).explanation;
         console.log(url);
+        console.log(explanation);
 
         https.get(url, res => {
           // The response should be an image
@@ -39,7 +41,7 @@ https
             });
 
             res.on("end", () => {
-              let fileName = __dirname + "/apod.jpg";
+              let fileName = `${__dirname}/apod.jpg`;
               fs.writeFileSync(fileName, img.read());
             });
           }
